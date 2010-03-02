@@ -1,3 +1,6 @@
 [submodule "web/js/FlatCMSEditorPlugin/tinymce"]
 	path = web/js/FlatCMSEditorPlugin/tinymce
 	url = git://github.com/tinymce/tinymce.git
+[submodule "lib/vendor/htmlpurifier"]
+	path = lib/vendor/htmlpurifier
+	url = git://repo.or.cz/htmlpurifier.git
