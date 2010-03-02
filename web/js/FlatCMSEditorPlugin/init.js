@@ -30,7 +30,7 @@ $(document).ready(function() {
       width: $(this).outerWidth(),
       height: "300px",  //arbitrary number, need to work out a better way for this
       tinymce: {
-        script_url: './js/FlatCMSEditorPlugin/tiny_mce/tiny_mce.js',
+        script_url: './js/FlatCMSEditorPlugin/tinymce/jscripts/tiny_mce/tiny_mce.js',
         // General options
         theme: "advanced",
         plugins: "safari,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
