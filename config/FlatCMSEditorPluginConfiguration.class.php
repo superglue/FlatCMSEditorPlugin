@@ -35,7 +35,6 @@ class FlatCMSEditorPluginConfiguration
         $controller->scripts[] = sgToolkit::url('/js/FlatCMSEditorPlugin/jquery.jeditable.autogrow.js');
         $controller->scripts[] = sgToolkit::url('/js/FlatCMSEditorPlugin/tinymce/jscripts/tiny_mce/jquery.tinymce.js');
         $controller->scripts[] = sgToolkit::url('/js/FlatCMSEditorPlugin/jquery.jeditable.tinymce.js');
-        $controller->scripts[] = sgToolkit::url('/js/FlatCMSEditorPlugin/jquery.autogrow.js');
         $controller->scripts[] = sgToolkit::url('/js/FlatCMSEditorPlugin/init.js');
         
         $controller->js_settings['FlatCMSEditorPlugin'] = array(
