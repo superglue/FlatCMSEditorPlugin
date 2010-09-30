@@ -12,7 +12,7 @@ class FlatCMSEditorPluginConfiguration
     }
     require_once dirname(__FILE__) . '/../lib/vendor/htmlpurifier/library/HTMLPurifier.auto.php';
     $config = HTMLPurifier_Config::createDefault();
-    $config->set('Cache.SerializerPath', sgConfiguration::getPath('settings.cache_dir'));
+    $config->set('Cache.SerializerPath', sgConfiguration::get('settings.cache_dir'));
     self::$purifier = new HTMLPurifier($config);
     
     return self::$purifier;
@@ -38,12 +38,12 @@ class FlatCMSEditorPluginConfiguration
         $controller->scripts[] = sgToolkit::url('/js/FlatCMSEditorPlugin/init.js');
         
         $controller->js_settings['FlatCMSEditorPlugin'] = array(
-          'saveURL' => sgToolkit::url(sgConfiguration::getPath('routing.FlatCMSEditorPlugin_save.path')),
+          'saveURL' => sgToolkit::url(sgConfiguration::get('routing.FlatCMSEditorPlugin_save.path')),
           'currentPath' => sgContext::getInstance()->getCurrentPath(),
         );
         if (isset($controller->content) && is_array($controller->content))
         {
-          $textarea_fields = sgConfiguration::getPath('settings.FlatCMSEditorPlugin.textarea_fields', array());
+          $textarea_fields = sgConfiguration::get('settings.FlatCMSEditorPlugin.textarea_fields', array());
           foreach ($controller->content as $key => &$field)
           {
             if (in_array($key, $textarea_fields))

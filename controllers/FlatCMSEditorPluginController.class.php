@@ -38,7 +38,7 @@ class FlatCMSEditorPluginController extends sgBaseController
   
   private function filterValue($id, $value)
   {
-    if (in_array($id, sgConfiguration::getPath('settings.FlatCMSEditorPlugin.textarea_fields')))
+    if (in_array($id, sgConfiguration::get('settings.FlatCMSEditorPlugin.textarea_fields')))
     {
       return FlatCMSEditorPluginConfiguration::getPurifier()->purify($value);
     }
